@@ -20,7 +20,7 @@ const Home = () => {
         const formData= new FormData()
         formData.append('file',selectedFile)
         try {
-           const response= await axios.post('http://localhost:3030/convertFile',formData,{
+           const response= await axios.post('https://backend-of-word-to-pdf.onrender.com/convertFile',formData,{
                 responseType:'blob',  
             })
             const url=window.URL.createObjectURL(new Blob([response.data]))
